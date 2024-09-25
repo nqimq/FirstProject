@@ -2,7 +2,7 @@ public class Fahrzeug {
 
     //Attribute
     private int kmh;
-    private String firma;
+    private String firma, modell;
 
     //Referenzen
 
