@@ -11,11 +11,20 @@ public class Person {
     public Person(String n, int a){
        name = n;
        alter = a;
-       halloSagen();
     }
 
     //Methoden
-    public void halloSagen(){
-        System.out.println("Hi, my name is "+name+" and I`m "+alter +" years old");
+
+    public void setName(String neuerName) {
+        this.name = neuerName;
+    }
+    public String getName() {
+        return this.name;
+    }
+    public void setAlter(int neuesAlter) {
+        this.alter = neuesAlter;
+    }
+    public int getAlter() {
+        return this.alter;
     }
 }

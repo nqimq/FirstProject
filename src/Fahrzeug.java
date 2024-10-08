@@ -1,52 +1,29 @@
 public class Fahrzeug {
 
     //Attribute
-    private int kmh;
-    private String firma, modell;
-    private String fahrer;
-    private String beifahrer;
 
     //Referenzen
+    private Person fahrer, beifahrer;
 
     // Konstruktor
-    public Fahrzeug(int k,String f,String fa,String b) {
-        kmh= k;
-        firma = f;
-        fahrer=fa;
-        beifahrer=b;
-        datenAnzeigen();
-        nenneBesatzung();
+    public Fahrzeug() {
     }
 
     //Methoden
-    public void datenAnzeigen() {
-        System.out.println("Dieses Auto ist von der Firma " + firma + " und fährt bis zu " + kmh + " Kilometer pro Stunde");
-    }
-    public void setFirma(String neueFirma) {
-    this.firma = neueFirma;
-    }
-    public String getFirma() {
-        return this.firma;
-    }
-    public void setKmh(int neueKmh) {
-        this.kmh = neueKmh;
-    }
-    public int getKmh() {
-        return this.kmh;
-    }
-    public void setFahrer(String neuerFahrer) {
+
+    public void setFahrer(Person neuerFahrer) {
         this.fahrer = neuerFahrer;
     }
-    public String getFahrer() {
+    public Person getFahrer() {
         return this.fahrer;
     }
-    public void setBeifahrer(String neuerBeifahrer) {
+    public void setBeifahrer(Person neuerBeifahrer) {
         this.beifahrer = neuerBeifahrer;
     }
-    public String getBeifahrer() {
+    public Person getBeifahrer() {
         return this.beifahrer;
     }
     public void nenneBesatzung(){
-        System.out.println("In diesem Auto sitzen " + getFahrer() + " und " + getBeifahrer());
+        System.out.println("In diesem Auto sitzen " + fahrer.getName() + " und " + beifahrer.getName());
     }
 }
